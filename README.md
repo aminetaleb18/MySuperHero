@@ -13,14 +13,18 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
 # Consignes respectées : 
 
   . Clean architecture & MVC
+  
   . Appels REST
+  
   . Ecrans : 2 activités
+  
   . Affichage d'une liste dans un RecyclerView permettant d'afficher les images et noms de chaque super héro dans un item spécifique.
+  
   . Affichage des caractéristiques du super héro, image, force, vitesse ...
   
   # Fonctionnalités :
+  
   . Icône de démarrage de l'application avec un logo marvel
-  
-  
+    
   . Splash affichant une image avec la marque "Marvel"
   
