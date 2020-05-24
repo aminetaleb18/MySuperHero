@@ -1,7 +1,7 @@
 # MySuperHero
 # Presentation  du projet Mon Super Hero :
 
-Ce  projet  a pour but de développer une application sous Android Studio en java, permettant d'afficher les supers herosef
+Ce  projet  a pour but de développer une application sous Android Studio en java, permettant d'afficher les 731 supers heros
 et  leurs caractéristiques.
 
 Ce projet utilise  une clean architecture et un pattern MVC dans une application android codé en java.
@@ -11,6 +11,9 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
 
   .  Installation de Android Studio
   .  Récupérer la branche de développment : https://github.com/aminetaleb18/MySuperHero
+  .  Pour accéder aux Api rest du serveur, il est nécessaire de récupérer une clé que l'on obtient en s'enregistrant via son compte      facebook. On obtien une base url du type BASE_URL = "https://superheroapi.com/api/588673XXXXXX/";
+  
+  
   
 # Consignes respectées : 
 
@@ -36,4 +39,5 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
 
   . Chargement des données issus du serveur 
   
+  ![ScreenshotLoading](https://user-images.githubusercontent.com/62145128/82763103-71d48680-9e05-11ea-81e5-02bf0fa6f038.jpg)
   
