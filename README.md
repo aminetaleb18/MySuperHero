@@ -38,7 +38,7 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
   
   ![SlashAmine](https://user-images.githubusercontent.com/62145128/82762673-a4c94b00-9e02-11ea-8a29-6386c6aacd93.png)
 
-  . Chargement des données issus du serveur 
+  . CHARGEMENT DES DONNEES ISSUS DU SERVEUR :   
   
   Le chargment initial consiste à récupérer les données considérées comme données basique qui renvoi
    l'url de l'image du super héro et son nom
@@ -51,7 +51,29 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
           
           ex : renvoi un gson file pour le super héro numéro 2 {"response":"success","id":"2","name":"AbeSapien","url":"https:\/\/www.superherodb.com\/pictures2\/portraits\/10\/100\/956.jpg"}
           
-  Dans l'image suivante, on voit le chargement des 731 super héro, ce chargement est assez long, un Toast indique le chargement du héros encours et indique aussi qu'il faut patienter
+  Dans l'image suivante, on voit le chargement des 731 supers héros, ce chargement est assez long, un Toast indique le chargement du héros encours et indique aussi qu'il faut patienter
   
   ![ScreenshotLoading](https://user-images.githubusercontent.com/62145128/82763103-71d48680-9e05-11ea-81e5-02bf0fa6f038.jpg)
+  
+  . AFFICHAGE DES CARACTERISTIQUES D'UN SUPER HERO :
+  
+  Les caractéristiques dites détaillées de nos super héro a lieu en cliquant sur un des items, celui-ci lancera une nouvelle activité
+  qui permettra de faire via nouvelle rest APi sur le répertoire "powerstats"
+  
+     Ces données sont récupéreés, sur le répertoire un gson://superheroapi.com/api/access-token/Id/powerstats
+        
+          . Id correspond à l'identifiant ou numéro du super héro.
+         
+          . répertoire powerstats contenant les données
+          
+          ex : renvoi un gson file pour le super héro numéro 2 {"response":"success","id":"2","name":"Abe Sapien","intelligence":"88","strength":"28","speed":"35","durability":"65","power":"100","combat":"85"}
+          
+          Les données sont l'intelligence, force, combat, puissance etc.
+          
+L'exemple suivant montre les caractéristiques pour le super héro dont l'Id vaut 2
+
+
+          
+  
+  
   
