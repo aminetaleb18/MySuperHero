@@ -32,3 +32,8 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
     
   . Splash affichant une image avec la marque "Marvel"
   
+  ![SlashAmine](https://user-images.githubusercontent.com/62145128/82762673-a4c94b00-9e02-11ea-8a29-6386c6aacd93.png)
+
+  . Chargement des données issus du serveur 
+  
+  
