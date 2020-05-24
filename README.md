@@ -80,6 +80,16 @@ L'exemple suivant montre les caractéristiques pour le super héro dont l'Id vau
 
 ![superHero2](https://user-images.githubusercontent.com/62145128/82763565-042a5980-9e09-11ea-8e31-945de3acddea.jpg)
 
+# EVOLUTIONS POSSIBLES
+
+  . Passez le projet en MVVM.
+  
+  . Une Gestion de favoris (Un début de gestion est réalisé).
+  
+  . Possibilité de comparer 2 supers héros en indiquant le plus fort ou plus puissant.
+  
+
+
           
   
   
