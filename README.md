@@ -13,7 +13,8 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
   .  Récupérer la branche de développment : https://github.com/aminetaleb18/MySuperHero
   .  Pour accéder aux Api rest du serveur, il est nécessaire de récupérer une clé que l'on obtient en s'enregistrant via son compte      facebook. On obtien une base url du type BASE_URL = "https://superheroapi.com/api/588673XXXXXX/";
   
-  
+  ![Baseurl](https://user-images.githubusercontent.com/62145128/82763219-5453ec80-9e06-11ea-86b2-d7a56b4df42c.png)
+
   
 # Consignes respectées : 
 
