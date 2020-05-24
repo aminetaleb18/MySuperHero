@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="10dip">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dip">
+
+        <TextView
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/marvelregular"
+            android:text="Super Hero numéro : "
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/im_hero"
+            android:layout_marginBottom="-99dp"
+            android:fontFamily="@font/marvelregular"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:contentDescription="Nom :"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        tools:text="Name" />
+
+    <ImageView
+        android:id="@+id/im_hero"
+        android:layout_width="464dp"
+        android:layout_height="312dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="TODO" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:text="Intelligence :" />
+
+    <TextView
+        android:id="@+id/intelligence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="#ff0000"
+        android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:text="Force :" />
+
+    <TextView
+        android:id="@+id/strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="#ff0000"
+        android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:text="Vitesse :" />
+    <TextView
+        android:id="@+id/speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="#ff0000"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Name"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:text="durabilité :" />
+    <TextView
+        android:id="@+id/durability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Name"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="#ff0000"
+        android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:text="Puissance :" />
+
+    <TextView
+        android:id="@+id/power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="#ff0000"
+        android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:text="Combat :" />
+    <TextView
+        android:id="@+id/combat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/marvelregular"
+        android:textColor="#ff0000"
+        android:textStyle="bold"/>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/add_fav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="30dp"
+        android:text="Ajouter aux favoris" />
+
+</LinearLayout>
