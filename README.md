@@ -48,9 +48,14 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
         
           . Id correspond à l'identifiant ou numéro du super héro.
          
-          . répertoire image contenant les données
-          
+          . répertoire contenant l'url de image et le nom du super héro
+                   
           ex : renvoi un gson file pour le super héro numéro 2 {"response":"success","id":"2","name":"AbeSapien","url":"https:\/\/www.superherodb.com\/pictures2\/portraits\/10\/100\/956.jpg"}
+          
+          Le chargement de l'image se réalise et s'affiche grâce à l'utilisation de la librairie Picasso version:'2.71828
+          
+          ex :  Picasso.get().load(imageUri).into(holder.imHero);
+          où imageUri est le path de l'image sur le serveur et holder.imHero est une imageView.
           
   Dans l'image suivante, on voit le chargement des 731 supers héros, ce chargement est assez long, un Toast indique le chargement du héros encours et indique aussi qu'il faut patienter
   
