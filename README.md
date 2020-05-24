@@ -72,6 +72,7 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
           
 L'exemple suivant montre les caractéristiques pour le super héro dont l'Id vaut 2
 
+![superHero2](https://user-images.githubusercontent.com/62145128/82763565-042a5980-9e09-11ea-8e31-945de3acddea.jpg)
 
           
   
