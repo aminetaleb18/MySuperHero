@@ -40,5 +40,18 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
 
   . Chargement des données issus du serveur 
   
+  Le chargment initial consiste à récupérer les données considérées comme données basique qui renvoi
+   l'url de l'image du super héro et son nom
+   
+   Ces données sont récupéreés par rest Api, sur le répertoire un gson://superheroapi.com/api/access-token/Id/image
+        
+          . Id correspond à l'identifiant ou numéro du super héro.
+         
+          . répertoire image contenant les données
+          
+          ex : renvoi un gson file pour le super héro numéro 2 {"response":"success","id":"2","name":"AbeSapien","url":"https:\/\/www.superherodb.com\/pictures2\/portraits\/10\/100\/956.jpg"}
+          
+  Dans l'image suivante, on voit le chargement des 731 super héro, ce chargement est assez long, un Toast indique le chargement du héros encours et indique aussi qu'il faut patienter
+  
   ![ScreenshotLoading](https://user-images.githubusercontent.com/62145128/82763103-71d48680-9e05-11ea-81e5-02bf0fa6f038.jpg)
   
