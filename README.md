@@ -27,6 +27,8 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
   # Fonctionnalités :
   
   . Icône de démarrage de l'application avec un logo marvel
+  
+  ![BureauHero](https://user-images.githubusercontent.com/62145128/82762611-48fec200-9e02-11ea-9f5a-4f666776e5a8.png)
     
   . Splash affichant une image avec la marque "Marvel"
   
