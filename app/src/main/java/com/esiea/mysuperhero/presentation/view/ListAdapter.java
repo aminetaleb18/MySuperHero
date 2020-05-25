@@ -1,14 +1,18 @@
 package com.esiea.mysuperhero.presentation.view;
 
 import android.content.Context;
+import android.os.Build;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.esiea.mysuperhero.R;
@@ -16,10 +20,12 @@ import com.esiea.mysuperhero.Singletons;
 import com.esiea.mysuperhero.presentation.model.Hero;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
+public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> implements Filterable {
     private List<Hero> values;
+    private List<Hero> valuesFiltered;
     private OnItemClickListener listener;
     int positionClicked = 0;
 
@@ -30,6 +36,7 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
         hero.setFavori(isfavori);
         notifyDataSetChanged();
     }
+
 
     public interface OnItemClickListener{
         void itemClick(Hero heroItem);
@@ -66,6 +73,7 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
      public ListAdapter (List<Hero> myDataset, OnItemClickListener listener) {
         this.values = myDataset;
         this.listener = listener;
+        this.valuesFiltered = myDataset;
      }
 
     // Create new views (invoked by the layout manager)
@@ -85,7 +93,7 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        final Hero currentHero = values.get(position);
+        final Hero currentHero = valuesFiltered.get(position);
         positionClicked = position;
         holder.nameHero.setText(currentHero.getName());
         /* gestion du chargement des images */
@@ -111,7 +119,44 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return values.size();
+        return valuesFiltered.size();
     }
+
+    @Override
+    public Filter getFilter () {
+        return new Filter() {
+            @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String charString = charSequence.toString();
+                if (charString.isEmpty()) {
+                    valuesFiltered = values;
+                } else {
+                    List<Hero> filteredList = new ArrayList<>();
+                    for (Hero row : values) {
+
+                        // name match condition. this might differ depending on your requirement
+                        // here we are looking for name or phone number match
+                        if (row.getName().toLowerCase().contains(charString.toLowerCase())) {
+                            filteredList.add(row);
+                        }
+                    }
+
+                    valuesFiltered = filteredList;
+                }
+
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = valuesFiltered;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                valuesFiltered = (ArrayList<Hero>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
+    }
+
 
 }
