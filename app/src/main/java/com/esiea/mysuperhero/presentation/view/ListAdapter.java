@@ -34,8 +34,8 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
         Toast.makeText(context,"favori : "+isfavori, Toast.LENGTH_LONG);
         Log.e("position"," : pos : "+positionClicked);
         Hero hero = valuesFiltered.get(positionClicked);
-        valuesFiltered.set(positionClicked,hero);
         hero.setFavori(isfavori);
+        valuesFiltered.set(positionClicked,hero);
         notifyDataSetChanged();
     }
 
