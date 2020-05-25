@@ -86,7 +86,7 @@ Lorsque l'utilisateur à sélectionné un super héro, il peut l'ajouter en favb
 une étoile permettra de visualiser les favoris dans la liste principale.
 Un checkbox a été ajouter afin d'indiquer que le super héro devient un favori
 
-
+![Screenshot_20200525_200300_com example td4](https://user-images.githubusercontent.com/62145128/82834956-ed483d80-9ec2-11ea-9815-a115c6e51a15.jpg)
 
 Visualisation de la liste globale avec un favori
 
