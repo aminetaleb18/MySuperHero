@@ -36,8 +36,12 @@ public class HeroDetailActivity extends AppCompatActivity {
     private DetailController detailController;
     private CheckBox addFavori;
 
-    public interface OnItemClickListener{
-        void itemClick(Hero heroItem);
+    private String isFavori = "0";
+    OnFavoriClickListener listener;
+
+
+    public interface OnFavoriClickListener{
+        void favClick(Hero heroItem);
     }
 
     @Override
@@ -57,11 +61,22 @@ public class HeroDetailActivity extends AppCompatActivity {
         addFavori = (CheckBox)findViewById(R.id.add_fav);
         Intent intent = getIntent();
         String heroBase = intent.getStringExtra("herobase");
-        Hero hero = Singletons.getGson().fromJson(heroBase, Hero.class);
+        final Hero hero = Singletons.getGson().fromJson(heroBase, Hero.class);
 
         Id = hero.getId();
         url_image = hero.getUrl();
         name = hero.getName();
+        isFavori = hero.getFavori();
+        if (isFavori.equals("1"))
+            addFavori.setChecked(true);
+
+        listener = new OnFavoriClickListener() {
+            @Override
+            public void favClick (Hero heroItem) {
+                detailController.onItemFavClickHero(heroItem);
+            }
+        };
+
 
         addFavori.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -70,9 +85,13 @@ public class HeroDetailActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
                 if ( isChecked ) {
-                    //       Toast.makeText(getApplicationContext(), "Add To Favori", Toast.LENGTH_LONG).show();
+                    isFavori = "1";
+                    hero.setFavori(isFavori);
+                    listener.favClick(hero);
                 } else {
-                    //Toast.makeText(getApplication(), "Remove From Favori", Toast.LENGTH_LONG).show();
+                    isFavori = "0";
+                    hero.setFavori(isFavori);
+                    listener.favClick(hero);
                 }
             }});
 
@@ -102,7 +121,14 @@ public class HeroDetailActivity extends AppCompatActivity {
         textIntelligence.setText( heroDetail.getIntelligence());
         textDurability.setText( heroDetail.getDurability());
         textPuissance.setText( heroDetail.getPower());
+    }
 
-
+    @Override
+    public void onBackPressed () {
+        Intent intent=new Intent();
+        intent.putExtra("isfavori",isFavori);
+        setResult(2,intent);
+        finish();//finishing activity
+        super.onBackPressed();
     }
 }

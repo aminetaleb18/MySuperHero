@@ -8,6 +8,8 @@ public class Hero {
 
     private String Id;
 
+    private String isFavori;
+
     public String getName(){
         return name;
     }
@@ -30,5 +32,16 @@ public class Hero {
 
     public void setId(String Id){
         this.Id = Id;
+    }
+
+    public String getFavori () {
+        return isFavori;
+    }
+
+    public void setFavori (String isFavori) {
+
+        this.isFavori = isFavori;
+        if (isFavori == null)
+            this.isFavori = "0";
     }
 }

@@ -11,4 +11,6 @@ public class Constants {
     public static final String SUPER_HERO_BASE = "powerstats";
 
     public static final String SUPER_HERO_IMAGE = "image";
+
+    public static  int HERO_REQUEST_CODE = 5689;
 }

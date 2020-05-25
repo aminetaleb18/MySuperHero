@@ -7,6 +7,7 @@ import android.widget.Toast;
 import com.esiea.mysuperhero.Singletons;
 import com.esiea.mysuperhero.presentation.model.Hero;
 import com.esiea.mysuperhero.presentation.model.HeroDetail;
+import com.esiea.mysuperhero.presentation.model.RestBaseHeroResponse;
 import com.esiea.mysuperhero.presentation.model.RestDetailsHeroResponse;
 import com.esiea.mysuperhero.presentation.view.HeroDetailActivity;
 import com.google.gson.Gson;
@@ -124,5 +125,19 @@ public class DetailController {
     }
 
 
+    public void onItemFavClickHero (Hero heroItem) {
+        RestBaseHeroResponse restBase = new RestBaseHeroResponse();
+        restBase.fav = heroItem.getFavori();
+        restBase.Id = heroItem.getId();
+        restBase.name = heroItem.getName();
+        restBase.urlImage = heroItem.getUrl();
+        restBase.response = "success";
 
+        Type listType = new TypeToken<RestBaseHeroResponse>(){}.getType();
+        String jsonString = gson.toJson(restBase, listType);
+        sharedPreferences
+                .edit()
+                .putString("jsonHeroList"+heroItem.getId(), jsonString)
+                .apply();
+    }
 }

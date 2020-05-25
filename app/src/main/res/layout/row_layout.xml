@@ -34,6 +34,18 @@
         android:textSize="16sp"
         android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/favori"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="-12dp"
+        android:layout_marginLeft="260dp"
+        android:contentDescription="@string/hero"
+        android:src="@drawable/favori" />
+
 
 
 </RelativeLayout>

@@ -59,6 +59,7 @@ public class MainController {
                 hero.setId(String.valueOf(heroBase.Id));
                 hero.setName(heroBase.name);
                 hero.setImageUrl(heroBase.urlImage);
+                hero.setFavori(heroBase.fav);
                 heroList.add(hero);
                 view.showList();
             }
@@ -96,6 +97,9 @@ public class MainController {
                         hero.setId(response.body().Id);
                         hero.setName(name);
                         hero.setImageUrl(response.body().urlImage);
+                        hero.setFavori(response.body().fav);
+                        if (response.body().fav == null)
+                            response.body().fav = "0";
                         Toast.makeText(view.getApplicationContext(), name+"\n Please wait ...", Toast.LENGTH_SHORT).show();
                         Singletons.getHeroList().add(hero);
 
@@ -113,12 +117,10 @@ public class MainController {
                 }
             });
         }
-        Toast.makeText(view.getApplicationContext(),"All Data Heroes Saved", Toast.LENGTH_LONG).show();
+
     }
 
     public void onItemClickHero(Hero heroItem){
         view.navigateToDetails(heroItem);
     }
-
-
 }

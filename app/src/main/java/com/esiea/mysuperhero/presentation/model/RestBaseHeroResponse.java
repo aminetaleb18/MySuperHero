@@ -16,4 +16,9 @@ public class RestBaseHeroResponse {
     @SerializedName("url")
     public String urlImage;
 
+    @SerializedName("fav")
+    public String fav;
+
+
+
 }

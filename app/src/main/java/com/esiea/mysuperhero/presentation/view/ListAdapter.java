@@ -1,14 +1,18 @@
 package com.esiea.mysuperhero.presentation.view;
 
+import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.esiea.mysuperhero.R;
+import com.esiea.mysuperhero.Singletons;
 import com.esiea.mysuperhero.presentation.model.Hero;
 import com.squareup.picasso.Picasso;
 
@@ -17,6 +21,15 @@ import java.util.List;
 public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     private List<Hero> values;
     private OnItemClickListener listener;
+    int positionClicked = 0;
+
+    public void setFavori (Context context, String isfavori) {
+        Toast.makeText(context,"favori : "+isfavori, Toast.LENGTH_LONG);
+        Log.e("position"," : pos : "+positionClicked);
+        Hero hero = Singletons.getHeroPosition(positionClicked);
+        hero.setFavori(isfavori);
+        notifyDataSetChanged();
+    }
 
     public interface OnItemClickListener{
         void itemClick(Hero heroItem);
@@ -26,6 +39,7 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
         // each data item is just a string in this case
         TextView nameHero;
         ImageView imHero;
+        ImageView fav;
         View layout;
 
         ViewHolder(View v) {
@@ -33,6 +47,8 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
             layout = v;
             nameHero = (TextView) v.findViewById(R.id.name);
             imHero = (ImageView)v.findViewById(R.id.icon);
+            fav = (ImageView)v.findViewById(R.id.favori);
+
         }
     }
 
@@ -70,13 +86,23 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
         final Hero currentHero = values.get(position);
+        positionClicked = position;
         holder.nameHero.setText(currentHero.getName());
         /* gestion du chargement des images */
         String imageUri = currentHero.getUrl();
         Picasso.get().load(imageUri).into(holder.imHero);
+
+        if (currentHero.getFavori() != null) {
+            if ( currentHero.getFavori().equals("1") )
+                holder.fav.setVisibility(View.VISIBLE);
+            else
+                holder.fav.setVisibility(View.INVISIBLE);
+        }
+
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                positionClicked = position;
                 listener.itemClick(currentHero);
             }
         });

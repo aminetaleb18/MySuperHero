@@ -17,6 +17,8 @@ import com.esiea.mysuperhero.presentation.model.Hero;
 
 import java.util.List;
 
+import static com.esiea.mysuperhero.Constants.HERO_REQUEST_CODE;
+
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -107,7 +109,19 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), heroItem.getName(), Toast.LENGTH_SHORT).show();
         Intent myIntent = new Intent(this, HeroDetailActivity.class);
         myIntent.putExtra("herobase", Singletons.getGson().toJson(heroItem));
-        this.startActivity(myIntent);
+        this.startActivityForResult(myIntent, HERO_REQUEST_CODE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == HERO_REQUEST_CODE)
+        {
+            String isfavori=data.getStringExtra("isfavori");
+            mAdapter.setFavori(this, isfavori);
+            showList();
+        }
     }
 }
 

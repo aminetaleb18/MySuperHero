@@ -83,6 +83,14 @@ public class Singletons {
         return listInstance;
     }
 
+    public static Hero getHeroPosition(int position){
+        if (listInstance == null){
+            listInstance = new ArrayList();
+        }
+
+        return (Hero)listInstance.get(position);
+    }
+
 
 
 }
