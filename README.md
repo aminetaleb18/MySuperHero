@@ -57,10 +57,10 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
           ex :  Picasso.get().load(imageUri).into(holder.imHero);
           où imageUri est le path de l'image sur le serveur et holder.imHero est une imageView.
           
-  Dans l'image suivante, on voit le chargement des 731 supers héros, ce chargement est assez long, un Toast indique le chargement du héros encours et indique aussi qu'il faut patienter
+  Dans l'image suivante, on voit le chargement des 732 supers héros, ce chargement est assez long, un Toast indique le chargement du héros encours<, le numéro encours et indique aussi qu'il faut patienter
   
-  ![ScreenshotLoading](https://user-images.githubusercontent.com/62145128/82763103-71d48680-9e05-11ea-81e5-02bf0fa6f038.jpg)
-  
+![Screenshot_20200525_201726_com example td4](https://user-images.githubusercontent.com/62145128/82835620-de628a80-9ec4-11ea-884e-d51c1dccb387.jpg)
+
   . AFFICHAGE DES CARACTERISTIQUES D'UN SUPER HERO :
   
   Les caractéristiques dites détaillées de nos super héro a lieu en cliquant sur un des items, celui-ci lancera une nouvelle activité
