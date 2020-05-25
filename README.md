@@ -90,8 +90,7 @@ Un checkbox a été ajouter afin d'indiquer que le super héro devient un favori
 
 Visualisation de la liste globale avec un favori
 
-![Screenshot_20200525_200502_com example td4](https://user-images.githubusercontent.com/62145128/82835047-2d0f2500-9ec3-11ea-86cb-9fdfed970696.jpg)
-
+![Screenshot_20200525_201245_com example td4](https://user-images.githubusercontent.com/62145128/82835404-377dee80-9ec4-11ea-938d-9fe7cfd596e0.jpg)
 
 
 
