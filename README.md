@@ -90,6 +90,7 @@ Un checkbox a été ajouter afin d'indiquer que le super héro devient un favori
 
 Visualisation de la liste globale avec un favori
 
+![Screenshot_20200525_200502_com example td4](https://user-images.githubusercontent.com/62145128/82835047-2d0f2500-9ec3-11ea-86cb-9fdfed970696.jpg)
 
 
 
@@ -98,7 +99,7 @@ Visualisation de la liste globale avec un favori
 
   . Passez le projet en MVVM.
   
-  . Une Gestion de favoris (Un début de gestion est réalisé).
+  . Possibilité d'afficher uniquement les favoris dans une liste dédiée.
   
   . Possibilité de comparer 2 supers héros en indiquant le plus fort ou plus puissant.
   
