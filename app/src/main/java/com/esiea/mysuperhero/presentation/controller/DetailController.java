@@ -37,7 +37,7 @@ public class DetailController {
 
     public void onStart (String Id, String url_image){
         Boolean data_retrived = getDataFromCache(Id, url_image);
-        if (data_retrived == false){
+        if (!data_retrived){
             makeApiCall(Id, url_image);
         }
     }
@@ -123,7 +123,6 @@ public class DetailController {
 
         Toast.makeText(view.getApplicationContext(),"All Data Heroes Saved", Toast.LENGTH_LONG).show();
     }
-
 
     public void onItemFavClickHero (Hero heroItem) {
         RestBaseHeroResponse restBase = new RestBaseHeroResponse();

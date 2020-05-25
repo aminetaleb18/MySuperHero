@@ -76,7 +76,7 @@ public class Singletons {
         return listAdapterInstance;
     }
 
-    public static List getHeroList(){
+    public static ArrayList<Hero> getHeroList(){
         if (listInstance == null){
             listInstance = new ArrayList();
         }

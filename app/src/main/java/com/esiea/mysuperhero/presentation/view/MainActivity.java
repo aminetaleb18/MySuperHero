@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void  createList () {
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         // use a linear layout manager
         layoutManager = Singletons.getLinearLayoutInstance(this);
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onSwiped (RecyclerView.ViewHolder viewHolder, int swipeDir) {
                         heroList.remove(viewHolder.getAdapterPosition());
-                        final Hero currentHero = (Hero) Singletons.getHeroList().get(viewHolder.getAdapterPosition());
+                        final Hero currentHero = Singletons.getHeroList().get(viewHolder.getAdapterPosition());
 
                         controller.onItemClickHero(currentHero);
                     }
@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         myIntent.putExtra("herobase", Singletons.getGson().toJson(heroItem));
         this.startActivityForResult(myIntent, HERO_REQUEST_CODE);
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)

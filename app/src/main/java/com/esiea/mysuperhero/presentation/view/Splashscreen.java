@@ -27,7 +27,6 @@ public class Splashscreen extends Activity {
         StartAnimations();
     }
 
-
     private void StartAnimations() {
 
         splashTread = new Thread() {
