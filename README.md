@@ -80,6 +80,20 @@ L'exemple suivant montre les caractéristiques pour le super héro dont l'Id vau
 
 ![superHero2](https://user-images.githubusercontent.com/62145128/82763565-042a5980-9e09-11ea-8e31-945de3acddea.jpg)
 
+AJOUT GESTION FAVORI
+
+Lorsque l'utilisateur à sélectionné un super héro, il peut l'ajouter en favbori
+une étoile permettra de visualiser les favoris dans la liste principale.
+Un checkbox a été ajouter afin d'indiquer que le super héro devient un favori
+
+
+
+Visualisation de la liste globale avec un favori
+
+
+
+
+
 # EVOLUTIONS POSSIBLES
 
   . Passez le projet en MVVM.
