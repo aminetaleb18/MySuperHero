@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -29,11 +31,12 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ImageView imageView;
     private SearchView searchView;
 
     SwipeRefreshLayout mySwipeRefreshLayout;
     private MainController controller;
+
+    private CheckBox favori_list;
 
     private List<Hero> heroList;
 
@@ -41,6 +44,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        favori_list = findViewById(R.id.favori_list);
+        favori_list.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                // TODO Auto-generated method stub
+
+                if ( isChecked ) {
+                    mAdapter.setListFavori(true);
+                    showList();
+                } else {
+                    mAdapter.setListFavori(false);
+                    showList();
+                }
+            }});
 
         controller = new MainController(this,
                 Singletons.getGson(),

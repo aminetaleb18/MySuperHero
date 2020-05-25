@@ -28,6 +28,7 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
     private List<Hero> valuesFiltered;
     private OnItemClickListener listener;
     int positionClicked = 0;
+    boolean listFavVisible = false;
 
 
     public void setFavori (Context context, String isfavori) {
@@ -36,7 +37,32 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
         Hero hero = valuesFiltered.get(positionClicked);
         hero.setFavori(isfavori);
         valuesFiltered.set(positionClicked,hero);
+        if (listFavVisible == true && isfavori.equals("0")) {
+            valuesFiltered.remove(positionClicked);
+        }
+
         notifyDataSetChanged();
+    }
+
+    public void setListFavori (boolean b) {
+
+        if (b == true)
+        {
+            listFavVisible =true;
+            List<Hero> filteredList = new ArrayList<>();
+            for (Hero row : values) {
+                if (row.getFavori().equals("1")) {
+                    filteredList.add(row);
+                }
+            }
+
+            valuesFiltered = filteredList;
+        }
+        else
+        {
+            listFavVisible = false;
+            valuesFiltered = values;
+        }
     }
 
 
