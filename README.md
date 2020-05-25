@@ -92,6 +92,12 @@ Visualisation de la liste globale avec un favori
 
 ![Screenshot_20200525_201245_com example td4](https://user-images.githubusercontent.com/62145128/82835404-377dee80-9ec4-11ea-938d-9fe7cfd596e0.jpg)
 
+RECHERCHE D'UN SUPER HERO
+
+Un fonctionnalité de recherche a été ajouté, car il y a 732 supers héros ce qui est assez conséquent
+La recherche a lieu en cliquant sur l'icône "search" en haut à droite
+
+![Screenshot_20200525_215227_com example td4](https://user-images.githubusercontent.com/62145128/82840294-4b305180-9ed2-11ea-86d0-6ed23ccb7bbc.jpg)
 
 
 # EVOLUTIONS POSSIBLES
