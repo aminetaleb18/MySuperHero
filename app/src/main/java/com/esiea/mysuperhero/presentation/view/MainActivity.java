@@ -118,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
         this.startActivityForResult(myIntent, HERO_REQUEST_CODE);
     }
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {

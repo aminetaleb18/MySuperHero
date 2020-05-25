@@ -29,10 +29,12 @@ public class   ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> 
     private OnItemClickListener listener;
     int positionClicked = 0;
 
+
     public void setFavori (Context context, String isfavori) {
         Toast.makeText(context,"favori : "+isfavori, Toast.LENGTH_LONG);
         Log.e("position"," : pos : "+positionClicked);
-        Hero hero = Singletons.getHeroPosition(positionClicked);
+        Hero hero = valuesFiltered.get(positionClicked);
+        valuesFiltered.set(positionClicked,hero);
         hero.setFavori(isfavori);
         notifyDataSetChanged();
     }
