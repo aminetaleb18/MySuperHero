@@ -57,10 +57,10 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
           ex :  Picasso.get().load(imageUri).into(holder.imHero);
           où imageUri est le path de l'image sur le serveur et holder.imHero est une imageView.
           
-  Dans l'image suivante, on voit le chargement des 731 supers héros, ce chargement est assez long, un Toast indique le chargement du héros encours et indique aussi qu'il faut patienter
+  Dans l'image suivante, on voit le chargement des 732 supers héros, ce chargement est assez long, un Toast indique le chargement du héros encours<, le numéro encours et indique aussi qu'il faut patienter
   
-  ![ScreenshotLoading](https://user-images.githubusercontent.com/62145128/82763103-71d48680-9e05-11ea-81e5-02bf0fa6f038.jpg)
-  
+![Screenshot_20200525_201726_com example td4](https://user-images.githubusercontent.com/62145128/82835620-de628a80-9ec4-11ea-884e-d51c1dccb387.jpg)
+
   . AFFICHAGE DES CARACTERISTIQUES D'UN SUPER HERO :
   
   Les caractéristiques dites détaillées de nos super héro a lieu en cliquant sur un des items, celui-ci lancera une nouvelle activité
@@ -80,11 +80,25 @@ L'exemple suivant montre les caractéristiques pour le super héro dont l'Id vau
 
 ![superHero2](https://user-images.githubusercontent.com/62145128/82763565-042a5980-9e09-11ea-8e31-945de3acddea.jpg)
 
+AJOUT GESTION FAVORI
+
+Lorsque l'utilisateur à sélectionné un super héro, il peut l'ajouter en favbori
+une étoile permettra de visualiser les favoris dans la liste principale.
+Un checkbox a été ajouter afin d'indiquer que le super héro devient un favori
+
+![Screenshot_20200525_200300_com example td4](https://user-images.githubusercontent.com/62145128/82834956-ed483d80-9ec2-11ea-9815-a115c6e51a15.jpg)
+
+Visualisation de la liste globale avec un favori
+
+![Screenshot_20200525_201245_com example td4](https://user-images.githubusercontent.com/62145128/82835404-377dee80-9ec4-11ea-938d-9fe7cfd596e0.jpg)
+
+
+
 # EVOLUTIONS POSSIBLES
 
   . Passez le projet en MVVM.
   
-  . Une Gestion de favoris (Un début de gestion est réalisé).
+  . Possibilité d'afficher uniquement les favoris dans une liste dédiée.
   
   . Possibilité de comparer 2 supers héros en indiquant le plus fort ou plus puissant.
   
