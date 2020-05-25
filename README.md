@@ -12,7 +12,7 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
 
   .  Installation de Android Studio
   .  Récupérer la branche de développment : https://github.com/aminetaleb18/MySuperHero
-  .  Pour accéder aux Api rest du serveur, il est nécessaire de récupérer une clé que l'on obtient en s'enregistrant via son compte      facebook. On obtien une base url du type BASE_URL = "https://superheroapi.com/api/588673XXXXXX/";
+  .  Pour accéder aux Api rest du serveur, il est nécessaire de récupérer un access_token ou clé que l'on obtient en s'enregistrant via son compte facebook. On obtient une base url du type BASE_URL = "https://superheroapi.com/api/588673XXXXXX/";
   
   ![Baseurl](https://user-images.githubusercontent.com/62145128/82763219-5453ec80-9e06-11ea-86b2-d7a56b4df42c.png)
 
@@ -48,9 +48,14 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
         
           . Id correspond à l'identifiant ou numéro du super héro.
          
-          . répertoire image contenant les données
-          
+          . répertoire contenant l'url de image et le nom du super héro
+                   
           ex : renvoi un gson file pour le super héro numéro 2 {"response":"success","id":"2","name":"AbeSapien","url":"https:\/\/www.superherodb.com\/pictures2\/portraits\/10\/100\/956.jpg"}
+          
+          Le chargement de l'image se réalise et s'affiche grâce à l'utilisation de la librairie Picasso version:'2.71828
+          
+          ex :  Picasso.get().load(imageUri).into(holder.imHero);
+          où imageUri est le path de l'image sur le serveur et holder.imHero est une imageView.
           
   Dans l'image suivante, on voit le chargement des 731 supers héros, ce chargement est assez long, un Toast indique le chargement du héros encours et indique aussi qu'il faut patienter
   
@@ -74,6 +79,16 @@ Ce projet  utilise une  rest API issu du serveur hébergé à la'adresse suivant
 L'exemple suivant montre les caractéristiques pour le super héro dont l'Id vaut 2
 
 ![superHero2](https://user-images.githubusercontent.com/62145128/82763565-042a5980-9e09-11ea-8e31-945de3acddea.jpg)
+
+# EVOLUTIONS POSSIBLES
+
+  . Passez le projet en MVVM.
+  
+  . Une Gestion de favoris (Un début de gestion est réalisé).
+  
+  . Possibilité de comparer 2 supers héros en indiquant le plus fort ou plus puissant.
+  
+
 
           
   
