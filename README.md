@@ -110,8 +110,8 @@ en fonction des caractères entrés la liste est remise à jour dynamiquement.
 # EVOLUTIONS POSSIBLES
 
   . Passez le projet en MVVM.
-  
-  . Possibilité d'afficher uniquement les favoris dans une liste dédiée.
+ 
+  . Possibilité de tri par categorie (puissance, vitesse, etc ...)
   
   . Possibilité de comparer 2 supers héros en indiquant le plus fort ou plus puissant.
   
