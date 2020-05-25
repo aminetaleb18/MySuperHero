@@ -100,7 +100,7 @@ public class MainController {
                         hero.setFavori(response.body().fav);
                         if (response.body().fav == null)
                             response.body().fav = "0";
-                        Toast.makeText(view.getApplicationContext(), name+"\n Please wait ...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(view.getApplicationContext(), hero.getId()+"/732\n"+name+"\n Please wait ...", Toast.LENGTH_SHORT).show();
                         Singletons.getHeroList().add(hero);
 
                         view.showList();
