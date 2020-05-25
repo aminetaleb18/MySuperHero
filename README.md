@@ -99,6 +99,13 @@ La recherche a lieu en cliquant sur l'icône "search" en haut à droite
 
 ![Screenshot_20200525_215227_com example td4](https://user-images.githubusercontent.com/62145128/82840294-4b305180-9ed2-11ea-86d0-6ed23ccb7bbc.jpg)
 
+Lorsqu'on appui sur l'icône, une barre de recherche permettant de faire une recherche dynamique
+en fonction des caractères entrés la liste est remise à jour dynamiquement.
+
+![Screenshot_20200525_215741_com example td4](https://user-images.githubusercontent.com/62145128/82840430-dc072d00-9ed2-11ea-8aad-c0edd04e41d0.jpg)
+
+
+
 
 # EVOLUTIONS POSSIBLES
 
